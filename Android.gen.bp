@@ -1,6 +1,17 @@
 // Automatically generated with:
 // go2bp -rewrite google.golang.org/protobuf=golang-protobuf -rewrite github.com/google/go-cmp/cmp=go-cmp -exclude-src internal/detrand/rand_test.go
 
+bootstrap_go_package {
+    name: "golang-protobuf-android",
+    pkgPath: "google.golang.org/protobuf/android",
+    deps: [
+        "golang-protobuf-internal-detrand",
+    ],
+    srcs: [
+        "android/android.go",
+    ],
+}
+
 blueprint_go_binary {
     name: "protoc-gen-go",
     deps: [
