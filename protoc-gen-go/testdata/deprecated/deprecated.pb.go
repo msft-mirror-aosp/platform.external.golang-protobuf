@@ -168,9 +168,7 @@ func init() {
 	proto.RegisterType((*DeprecatedResponse)(nil), "deprecated.DeprecatedResponse")
 }
 
-func init() {
-	proto.RegisterFile("deprecated/deprecated.proto", fileDescriptor_f64ba265cd7eae3f)
-}
+func init() { proto.RegisterFile("deprecated/deprecated.proto", fileDescriptor_f64ba265cd7eae3f) }
 
 var fileDescriptor_f64ba265cd7eae3f = []byte{
 	// 287 bytes of a gzipped FileDescriptorProto
@@ -196,11 +194,11 @@ var fileDescriptor_f64ba265cd7eae3f = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConnInterface
+var _ grpc.ClientConn
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+const _ = grpc.SupportPackageIsVersion4
 
 // DeprecatedServiceClient is the client API for DeprecatedService service.
 //
@@ -209,17 +207,15 @@ const _ = grpc.SupportPackageIsVersion6
 // Deprecated: Do not use.
 type DeprecatedServiceClient interface {
 	// DeprecatedCall takes a DeprecatedRequest and returns a DeprecatedResponse.
-	//
-	// Deprecated: Do not use.
 	DeprecatedCall(ctx context.Context, in *DeprecatedRequest, opts ...grpc.CallOption) (*DeprecatedResponse, error)
 }
 
 type deprecatedServiceClient struct {
-	cc grpc.ClientConnInterface
+	cc *grpc.ClientConn
 }
 
 // Deprecated: Do not use.
-func NewDeprecatedServiceClient(cc grpc.ClientConnInterface) DeprecatedServiceClient {
+func NewDeprecatedServiceClient(cc *grpc.ClientConn) DeprecatedServiceClient {
 	return &deprecatedServiceClient{cc}
 }
 
@@ -238,8 +234,6 @@ func (c *deprecatedServiceClient) DeprecatedCall(ctx context.Context, in *Deprec
 // Deprecated: Do not use.
 type DeprecatedServiceServer interface {
 	// DeprecatedCall takes a DeprecatedRequest and returns a DeprecatedResponse.
-	//
-	// Deprecated: Do not use.
 	DeprecatedCall(context.Context, *DeprecatedRequest) (*DeprecatedResponse, error)
 }
 

@@ -155,9 +155,7 @@ func init() {
 	proto.RegisterType((*StreamMsg2)(nil), "grpc.testing.StreamMsg2")
 }
 
-func init() {
-	proto.RegisterFile("grpc/grpc.proto", fileDescriptor_81ea47a3f88c2082)
-}
+func init() { proto.RegisterFile("grpc/grpc.proto", fileDescriptor_81ea47a3f88c2082) }
 
 var fileDescriptor_81ea47a3f88c2082 = []byte{
 	// 244 bytes of a gzipped FileDescriptorProto
@@ -181,11 +179,11 @@ var fileDescriptor_81ea47a3f88c2082 = []byte{
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ context.Context
-var _ grpc.ClientConnInterface
+var _ grpc.ClientConn
 
 // This is a compile-time assertion to ensure that this generated file
 // is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
+const _ = grpc.SupportPackageIsVersion4
 
 // TestClient is the client API for Test service.
 //
@@ -201,10 +199,10 @@ type TestClient interface {
 }
 
 type testClient struct {
-	cc grpc.ClientConnInterface
+	cc *grpc.ClientConn
 }
 
-func NewTestClient(cc grpc.ClientConnInterface) TestClient {
+func NewTestClient(cc *grpc.ClientConn) TestClient {
 	return &testClient{cc}
 }
 
