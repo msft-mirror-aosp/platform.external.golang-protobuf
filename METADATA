@@ -9,11 +9,12 @@ third_party {
     type: HOMEPAGE
     value: "https://github.com/protocolbuffers/protobuf-go"
   }
-  url {
-    type: GIT
-    value: "https://github.com/protocolbuffers/protobuf-go"
+  identifier {
+    type: "Git"
+    value: "https://github.com/protocolbuffers/protobuf-go.git"
+    version: "f221882bfb484564f1714ae05f197dea2c76898d"
+    closest_version: "v1.30.0"
   }
-  version: "v1.30.0"
   license_type: NOTICE
   last_upgrade_date {
     year: 2023
