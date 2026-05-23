@@ -27,6 +27,9 @@ blueprint_go_binary {
     srcs: [
         "cmd/protoc-gen-go/main.go",
     ],
+    testData: [
+        "cmd/protoc-gen-go/testdata/**/*",
+    ],
     testSrcs: [
         "cmd/protoc-gen-go/annotation_test.go",
     ],
@@ -404,6 +407,9 @@ bootstrap_go_package {
     srcs: [
         "internal/fuzz/jsonfuzz/fuzz.go",
     ],
+    testData: [
+        "internal/fuzz/jsonfuzz/corpus/**/*",
+    ],
     testSrcs: [
         "internal/fuzz/jsonfuzz/fuzz_test.go",
     ],
@@ -420,6 +426,9 @@ bootstrap_go_package {
     ],
     srcs: [
         "internal/fuzz/textfuzz/fuzz.go",
+    ],
+    testData: [
+        "internal/fuzz/textfuzz/corpus/**/*",
     ],
     testSrcs: [
         "internal/fuzz/textfuzz/fuzz_test.go",
@@ -439,6 +448,9 @@ bootstrap_go_package {
     ],
     srcs: [
         "internal/fuzz/wirefuzz/fuzz.go",
+    ],
+    testData: [
+        "internal/fuzz/wirefuzz/corpus/**/*",
     ],
     testSrcs: [
         "internal/fuzz/wirefuzz/fuzz_test.go",
