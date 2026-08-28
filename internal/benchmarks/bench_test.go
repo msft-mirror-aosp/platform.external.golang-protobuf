@@ -21,11 +21,6 @@ import (
 	"google.golang.org/protobuf/reflect/protoregistry"
 
 	benchpb "google.golang.org/protobuf/internal/testprotos/benchmarks"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message1/proto2"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message1/proto3"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message2"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message3"
-	_ "google.golang.org/protobuf/internal/testprotos/benchmarks/datasets/google_message4"
 )
 
 func BenchmarkWire(b *testing.B) {
